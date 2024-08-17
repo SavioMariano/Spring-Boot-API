@@ -16,9 +16,13 @@ public class Account {
 
     private String agency;
 
+    // scale é a quantidade de numeros pós virgula e precision 13 o total de numeros
+    // Ex: 99.999.999.999,99
     @Column(precision = 13, scale = 2)
     private BigDecimal balance;
 
+    // scale é a quantidade de numeros pós virgula e precision 13 o total de numeros
+    // Ex: 99.999.999.999,99
     @Column(name = "additional_limit", precision = 13, scale = 2)
     private BigDecimal limit;
 
