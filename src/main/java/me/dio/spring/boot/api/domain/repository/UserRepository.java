@@ -8,5 +8,6 @@ import me.dio.spring.boot.api.domain.model.User;
 @Repository
 public interface UserRepository extends CrudRepository<User, Long> {
 
+    boolean existsByAccountNumber(String accountNumber);
     
 }
