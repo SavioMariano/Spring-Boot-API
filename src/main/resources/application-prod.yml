@@ -1,9 +1,11 @@
 spring:
   datasource:
-    url: ${DATABASE_URL}
-    username: ${PGUSER}
-    password: ${PGPASSWORD}
+    url: jdbc:postgresql://${DATABASE_HOST:postgres.railway.internal}:${DATABASE_PORT:5432}/${DATABASE_NAME:railway}
+    username: ${DATABASE_USER:postgres}
+    password: ${DATABASE_PASSWORD:sPzpNuaLURBWtIaLpoGeURUkIjZWgVcQ}
+    driverClassName: org.postgresql.Driver
   jpa:
-    open-in-view: false
     hibernate:
       ddl-auto: create
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
